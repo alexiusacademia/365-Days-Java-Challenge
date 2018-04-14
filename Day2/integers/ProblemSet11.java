@@ -20,12 +20,12 @@
 * 7 
 * 3 
 * Sample Output: 
-* 4
+* 5
 */
 
 import java.util.Scanner;
 
-public class ProblemSet11 {
+public class Main {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
@@ -34,16 +34,15 @@ public class ProblemSet11 {
     int A = scanner.nextInt();
     int B = scanner.nextInt();
 
-    // Equation:
-    // H = x(A-B) + A
-    // x is unknown
-    // Number of days = x + 1
+    int numberOfWholeDays = (H - A) / (A - B);
 
-    int x = H - A;
-    x /= (A - B);
+    int numberOfDays = numberOfWholeDays + 1;
 
-    int numberOfDays;
-    numberOfDays = x + 1;
+    int climbedHeight = numberOfWholeDays * (A - B) + A;
+
+    if (climbedHeight < H) {
+      numberOfDays++;
+    }
 
     System.out.println(numberOfDays);
   }
