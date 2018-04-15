@@ -2,7 +2,7 @@ import java.util.*;
 
 public class OddsAndEvens {
   public static void main(String[] args) {
-  	Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
 
     System.out.println("Let's play a game called \"Odds and Evens\"");
     
@@ -49,14 +49,14 @@ public class OddsAndEvens {
       if (isEven) {
         playerWins = true;
       } else {
-      	playerWins = false;
+        playerWins = false;
       }
       result = "even";
     } else {
       if (!isEven) {
         playerWins = true;
       } else {
-      	playerWins = false;
+        playerWins = false;
       }
       result = "odd";
     }
