@@ -1,3 +1,7 @@
+/**
+ * Create a custom exception
+ */
+
 public class ThrowException {
   public static void main(String[] args) {
     validateAge(16);
