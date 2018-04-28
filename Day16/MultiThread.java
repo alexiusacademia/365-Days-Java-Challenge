@@ -5,6 +5,8 @@ public class MultiThread {
   public static void main(String[] args) {
     SampleThread st = new SampleThread("MyThread");
     st.start();
+    SampleThread st2 = new SampleThread("My Second Thread");
+    st2.start();
   }
 }
 // Thread class
