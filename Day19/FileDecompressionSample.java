@@ -1,33 +1,32 @@
-// Compress a file
+// Decompress a file
 import java.io.*;
 import java.util.zip.*;
 
-public class FileCompressionSample {
+public class FileDecompressionSample {
 	public static void main(String[] args) {
-		File source = new File("dictionary.txt");
-		File destination = new File("compressed_dictionary");
+		File source = new File("compressed_dictionary");
+		File destination = new File("decompressed_dictionary.txt");
 		try {
-			fileCompress(source, destination);
+			fileDecompress(source, destination);
 		} catch (IOException e) {
 			System.out.println(e);
 		}
 	}
 
-	private static void fileCompress(File source, File destination) throws IOException {
+	private static void fileDecompress(File source, File destination) throws IOException {
 		byte[] buffer = new byte[1024];
 		// Create input stream to handle source
 		FileInputStream fis = new FileInputStream(source);
+		GZIPInputStream gzis = new GZIPInputStream(fis);
 		// Create output stream to handle destination
 		FileOutputStream fos = new FileOutputStream(destination);
 
-		GZIPOutputStream gzos = new GZIPOutputStream(fos);
 		int read;
-		while ((read = fis.read(buffer)) != -1) {
-			gzos.write(buffer, 0, read);
+		while ((read = gzis.read(buffer)) != -1) {
+			fos.write(buffer, 0, read);
 		}
 
-		gzos.finish();
-		gzos.close();
+		gzis.close();
 		fos.close();
 		fis.close();
 	}
