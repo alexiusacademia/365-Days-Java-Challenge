@@ -1,5 +1,5 @@
 /**
- * This mulithread demo will show unexpected results
+ * Solution to multithreading problem
  */
 
 public class MultiThreadSynchronize {
