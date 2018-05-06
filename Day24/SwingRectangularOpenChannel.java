@@ -3,14 +3,28 @@
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SwingRectangularOpenChannel {
   static JFrame mainWindow;
+
+  // Buttons
+  static JButton btnClear;
+  static JButton btnCancel;
+  static JButton btnCalculate;
+
+  // Input text fields
+  static ArrayList<JTextField> inputFields;
 
   private static final String WINDOW_TITLE = "OPEN CHANNEL";
   private static final String WINDOW_PAGE_TITLE = "RECTANGULAR OPEN CHANNEL";
 
   public static void main(String[] args) {
+    // Initialize inputField
+    inputFields = new ArrayList<>();
+
     javax.swing.SwingUtilities.invokeLater(new Runnable(){
       public void run() {
         setUI();
@@ -22,7 +36,6 @@ public class SwingRectangularOpenChannel {
     // Initialize mainWindow
     mainWindow = new JFrame();
     mainWindow.setTitle(WINDOW_TITLE);
-    // mainWindow.setSize(600, 400);
 
     // Create the main panel
     JPanel mainPanel = new JPanel();
@@ -90,7 +103,6 @@ public class SwingRectangularOpenChannel {
   private static void createButtons(JPanel parentPanel) {
     JButton[] buttons = {
             new JButton("Clear"),
-            new JButton("Cancel"),
             new JButton("Calculate")
     };
 
@@ -100,14 +112,38 @@ public class SwingRectangularOpenChannel {
 
     // Set tooltip text
     buttons[0].setToolTipText("Clear all the inputs and outputs.");
-    buttons[1].setToolTipText("Cancel operation.");
-    buttons[2].setToolTipText("Analyze the hydraulic properties.");
+    buttons[1].setToolTipText("Analyze the hydraulic properties.");
+
+    // Set reference to buttons
+    btnClear = buttons[0];
+    btnCalculate = buttons[1];
+
+    btnClear.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        btnClearPressed();
+      }
+    });
 
     parentPanel.add(Box.createHorizontalStrut(10));
   }
 
+  // Button listers
+  private static void btnClearPressed() {
+    try {
+      for (JTextField tf : inputFields) {
+        tf.setText("");
+      }
+
+      JOptionPane.showMessageDialog(null, "All inputs and outputs are cleared!");
+    } catch (Exception e) {
+      System.out.println("An error has occurred: " + e);
+    }
+
+  }
+
   private static void createInputComponents(JPanel parentPanel) {
-    JLabel[] labels = {
+    JLabel[] inputLabels = {
             new JLabel("Discharge"),
             new JLabel("Bed Slope"),
             new JLabel("Water Depth"),
@@ -122,17 +158,24 @@ public class SwingRectangularOpenChannel {
             new JTextField(5)
     };
 
-    int rowCount = labels.length;
+    int rowCount = inputLabels.length;
 
     JPanel panel;
 
     for (int i=0; i<rowCount; i++) {
       panel = new JPanel();
       panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
-      panel.add(labels[i]);
+      panel.add(inputLabels[i]);
       panel.add(Box.createHorizontalGlue());
       panel.add(textFields[i]);
       parentPanel.add(panel);
+
+      textFields[i].setHorizontalAlignment(SwingConstants.RIGHT);
+    }
+
+    for (JTextField tf : textFields) {
+      // Add to array of input textfields
+      inputFields.add(tf);
     }
   }
 
@@ -165,6 +208,7 @@ public class SwingRectangularOpenChannel {
       panel.add(Box.createHorizontalGlue());
       panel.add(textFields[i]);
       parentPanel.add(panel);
+      textFields[i].setHorizontalAlignment(SwingConstants.RIGHT);
     }
   }
 }
