@@ -20,7 +20,7 @@ This repo is the compilation of files for my 1-year java programming journey. Fr
 - To add a little spice, the graphical user interface has been drafted.
 ![alt image](https://alexiusacademia.com/images/irrig_flo_first_gui_draft.JPG "Preview of GUI")
 
-** May 11, 2018 (Day 28)**
+**May 11, 2018 (Day 28)**
 - Continue work on IrrigFlo
 - Continue class TrapezoidalOpenChannel that started May 10, 2018
 - Finish core functionalities of the class except error handling.
