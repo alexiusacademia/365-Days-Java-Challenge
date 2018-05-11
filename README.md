@@ -19,3 +19,14 @@ This repo is the compilation of files for my 1-year java programming journey. Fr
 - This time I started to compile the library into a jar file and used in another project just to see if it works, it does.
 - To add a little spice, the graphical user interface has been drafted.
 ![alt image](https://alexiusacademia.com/images/irrig_flo_first_gui_draft.JPG "Preview of GUI")
+
+** May 11, 2018 (Day 28)**
+- Continue work on IrrigFlo
+- Continue class TrapezoidalOpenChannel that started May 10, 2018
+- Finish core functionalities of the class except error handling.
+- Below is a sample problem solved using an online calculator.
+![alt text](https://alexiusacademia.com/images/day28/trapezoidal_channel_sample_problem.png "Sample Problem")
+- Below is the sample implementation of the class
+![alt text](https://alexiusacademia.com/images/day28/trapezoidal_channel_implementation.png "Implementation")
+- Below is the result of the sample implementation. Can be compared with the result in the sample problem.
+![alt text](https://alexiusacademia.com/images/day28/trapezoidal_channel_result.png "Sample result")
