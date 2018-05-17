@@ -30,3 +30,9 @@ This repo is the compilation of files for my 1-year java programming journey. Fr
 ![alt text](https://alexiusacademia.com/images/day28/trapezoidal_channel_implementation.png "Implementation")
 - Below is the result of the sample implementation. Can be compared with the result in the sample problem.
 ![alt text](https://alexiusacademia.com/images/day28/trapezoidal_channel_result.png "Sample result")
+
+**May 16, 2018 (Day 32)**
+- Continue work on IrrigFlo library
+- Started coding on IrregularChannelSection class for irregular shaped channels (e.g. rivers)
+- Created project board on github for monitoring
+- Implement travis-ci build badge
