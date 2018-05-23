@@ -36,3 +36,8 @@ This repo is the compilation of files for my 1-year java programming journey. Fr
 - Started coding on IrregularChannelSection class for irregular shaped channels (e.g. rivers)
 - Created project board on github for monitoring
 - Implement travis-ci build badge
+
+**May 22, 2018 (Day 38)**
+- Continue on the IrrigFlo library
+- Completed the feature for irregular section channels
+- Published a release of the library v1.2.0 at github
