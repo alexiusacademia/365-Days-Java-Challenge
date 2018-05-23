@@ -1,1 +1,3 @@
-*.rb linguist-language=Java
+.idea/
+out/
+365DaysJavaChallenge.iml
