@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils;
 public class DownloadFile {
   public static void main(String[] args) {
     String source = "https://github.com/alexiusacademia/IrrigFlo/archive/1.2.0.zip";
-    String destination = "v1.2.0.zip";
+    String destination = "lib-src.zip";
 
     try {
       // Connection timeout = 10 seconds
@@ -18,8 +18,9 @@ public class DownloadFile {
         10000,
         10000
       );
+      System.out.println("File downloaded...");
     } catch (Exception e) {
-      e.printStackTrace();
+      System.out.println(e.getMessage());
     }
   }
 }

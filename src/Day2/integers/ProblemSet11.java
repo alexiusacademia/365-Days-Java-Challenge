@@ -25,7 +25,7 @@ package Day2.integers;/*
 
 import java.util.Scanner;
 
-public class Main {
+public class ProblemSet11 {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);

@@ -1,6 +1,3 @@
-package Day16; /**
- * This mulithread demo will show unexpected results
- */
 
 public class MultiThreadProblem {
   public static void main(String[] args) {
