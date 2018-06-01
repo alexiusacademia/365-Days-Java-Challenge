@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import java.net.URL?>
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="Day46.JavaFX4Controller"
+          hgap="10" vgap="10" alignment="CENTER" styleClass="root">
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25" />
+    </padding>
+
+    <stylesheets>
+        <URL value="@JavaFX3.css" />
+    </stylesheets>
+
+    <!-- Controls -->
+    <Text text="Welcome"
+        GridPane.columnIndex="0"
+        GridPane.rowIndex="0"
+        GridPane.columnSpan="2"
+        id="scene-title"/>
+
+    <Label text="Username:"
+        GridPane.rowIndex="1"
+        GridPane.columnIndex="0"/>
+    <TextField GridPane.rowIndex="1"
+        GridPane.columnIndex="1"/>
+
+    <Label text="Password:"
+           GridPane.rowIndex="2"
+           GridPane.columnIndex="0"/>
+    <TextField GridPane.rowIndex="2"
+               GridPane.columnIndex="1"/>
+
+    <HBox spacing="10" alignment="BOTTOM_RIGHT"
+        GridPane.rowIndex="4"
+        GridPane.columnIndex="1">
+        <Button text="Sign In"
+            onAction="#handleSigninButtonAction"/>
+    </HBox>
+
+    <Text id="message" fx:id="message"
+        GridPane.rowIndex="6"
+        GridPane.columnIndex="1"/>
+
+</GridPane>
