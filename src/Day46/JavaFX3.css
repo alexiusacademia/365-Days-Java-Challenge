@@ -1,0 +1,32 @@
+/* Root scene */
+.root {
+   -fx-background-image: url("background.jpg");
+}
+
+/* All the labels */
+.label {
+   -fx-font-size: 14px;
+   -fx-font-weight: bolder;
+   -fx-text-fill: #333333;
+   -fx-text-effect: dropshadow( gaussian, rgba(255, 255, 255, 0.5), 0, 0, 0, 1 );
+}
+
+.textfield {
+   -fx-border-radius: 0px !important;
+}
+
+#scene-title {
+   -fx-font-size: 2em;
+   -fx-text-alignment: center;
+   -fx-font-family: "Arial Black";
+}
+
+#message {
+   -fx-fill: FIREBRICK;
+   -fx-font-weight: bolder;
+}
+
+#btn-sign-in {
+   -fx-padding: 8px;
+   -fx-font-size: 1.2em;
+}
